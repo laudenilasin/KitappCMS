@@ -1,2 +1,2 @@
-# KITAPP CMS Staging 2020
+# KITAPP CMS 2020
 
