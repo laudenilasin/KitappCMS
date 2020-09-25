@@ -1,0 +1,76 @@
+    <div class="dashboard-content page-video">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4> Video</h4>
+              <p> Video <i class="fas fa-chevron-right"></i> Video View </p>
+            </div>
+
+            <div class="col-md-10 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" role="alert" id="success_video_updated" style="display:none;">
+                <b id="filename_success">[Video Name.mp4]</b> is successfully uploaded!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" id="video-container" src="{{video.video}}" allowfullscreen></iframe>
+              </div>
+
+              <form>
+                <div class="form-group">
+                    <a class="btn btn-primary-round" id="edit-cbf-video"><i class="far fa-edit"></i> Edit</a>
+                    <a class="btn btn-cancel-round action-btn-video" id="cancel-cbf-video" style="display:none;">Cancel</a>
+                    <a class="btn btn-success-round action-btn-video disabled" id="update-cbf-video" style="display:none;">Update New Video </a>
+                    <!--<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>-->
+                </div>
+
+                <div class="form-group file-detail-form" style="display:none;">
+                  <!-- uploaded video -->
+                  <label>Current Video</label>
+                  <input type="text" class="form-control" id="video-filename" disabled value="{{video.filename}}">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                  <!-- end -->
+
+                  <!-- if edit button is clicked -->
+                  <!-- Validation: Required fieild, accepts mp4 file type only  -->
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupFileAddon01">Upload Video</span>
+                    </div>
+
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input video-input" id="inputGroupFile01" accept="video/*"
+                        aria-describedby="inputGroupFileAddon01" required>
+                      <label class="custom-file-label" id="video-filename-l" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
+                  <span class="badge badge-danger" id="cbf_video_validation" style="">File Type: Mp4, Max File size: 40MB</span>
+                  <!-- end -->
+
+                </div>
+              </form>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+     <div class="modal fade" id="updatevideo" tabindex="-1" role="dialog" aria-labelledby="updatevideo" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2>Saving..</h2>
+          <p>Please wait.</p>
+          <div class="progress-fixed" style="width: 100%;">
+          <div class="progress" style="height: 10px;border-radius: 0">
+            <div class="progress-bar video-progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

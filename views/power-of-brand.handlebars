@@ -1,0 +1,120 @@
+ <div class="dashboard-content page-powerbrand">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Power of Brand</h4>
+              <p>Power of Brand <i class="fas fa-chevron-right"></i> Power of Brand view </p>
+            </div>
+
+            <div class="col-md-12 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" id="success_pb_alert" style="display:none;" role="alert">
+                Updated successfully!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              {{!-- <div class="page-priceprogram--screen1">
+                {{#ifCond video.page_shown '==' 'Interactive Screen'}}
+               <div class="row">
+                  <div class="col-md-6 page-priceprogram--display">
+                      <h4 style="margin-top: 20px;">Interactive Screen</h4>
+                       <img src="image/screen-powerbrand-interactive-show.png" id="pb_img_interactive" class="rounded" alt="...">
+                       
+                  </div>
+
+                  <div class="col-md-6 page-priceprogram--display">
+                       <h4 style="margin-top: 20px;">Video Screen</h4>
+                       <img src="image/screen-powerbrand-video-hide.png" id="pb_img_video" class="rounded" alt="...">
+                       
+                  </div> 
+               </div>
+               <div class="col-md-6" style="margin: 0 auto">
+                    <button class="btn btn-success-round btn-block show-hide-video" style="margin-top: 20px;">Show Video - Hide Interactive Screen</button>
+                </div>
+                {{else}}
+                <div class="row">
+                  <div class="col-md-6 page-priceprogram--display">
+                      <h4 style="margin-top: 20px;">Interactive Screen</h4>
+                       <img src="image/screen-powerbrand-interactive-hide.png" id="pb_img_interactive" class="rounded" alt="...">
+                       
+                  </div>
+
+                  <div class="col-md-6 page-priceprogram--display">
+                       <h4 style="margin-top: 20px;">Video Screen</h4>
+                       <img src="image/screen-powerbrand-video-show.png" id="pb_img_video" class="rounded" alt="...">
+                       
+                  </div> 
+               </div>
+               <div class="col-md-6" style="margin: 0 auto">
+                    <button class="btn btn-success-round btn-block show-hide-video" style="margin-top: 20px;">Show Interactive Screen - Hide Video</button>
+                </div>
+                {{/ifCond}}
+
+              </div> --}}
+
+              <div class="col-md-10 page-content" style="margin: 0 auto; padding-top: 50px;">
+
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item pb_video_container" src="{{video.video}}" allowfullscreen></iframe>
+              </div>
+
+              <form>
+                <div class="form-group">
+                    <!-- <a href="#.html" class="btn btn-primary-round "><i class="far fa-edit"></i> Edit</a> -->
+                    
+                    <!-- if edit button  is clicked -->
+                    <a class="btn btn-cancel-round cancel-video-pb disabled">Cancel</a>
+                    <a class="btn btn-success-round disabled update-video-pb">Update New Video</a>
+                    <!--  -->
+                </div>
+
+                <div class="form-group">
+                  <!-- uploaded video -->
+                 <!--  <label>Current Video</label>
+                  <input type="text" class="form-control" disabled value="CBF-video.mp4"> -->
+                  <!-- end -->
+
+                  <!-- if edit button is clicked -->
+                  <!-- Validation: Required fieild, accepts mp4 file type only  -->
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupFileAddon01">Upload Video</span>
+                    </div>
+
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input pb_fileInput" id="inputGroupFile01" accept="video/*"
+                        aria-describedby="inputGroupFileAddon01" required>
+                      <label class="custom-file-label" id="pb_input_filename" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
+                  <span class="badge badge-danger">File Type: Mp4, Max File size: 40MB</span>
+                  <!-- end -->
+                </div>
+              </form>
+              
+            </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+  <!-- MODAL - Update Program -->
+  <div class="modal fade" id="updatepowerofbrand" tabindex="-1" role="dialog" aria-labelledby="updatepowerofbrand" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2>Saving..</h2>
+          <p>Please wait.</p>
+            <div class="progress-fixed" style="width: 100%;">
+          <div class="progress" style="height: 10px;border-radius: 0">
+            <div class="progress-bar pb-video-progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

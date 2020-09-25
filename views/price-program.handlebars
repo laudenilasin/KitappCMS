@@ -1,0 +1,239 @@
+    <!-- // Dashboard Content -->
+    <div class="dashboard-content page-priceprogram">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Price Program Rewards</h4>
+              <p>Price Program Rewards <i class="fas fa-chevron-right"></i> Price Program Rewards View</p>
+            </div>
+
+            <div class="col-md-12 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" id="success_pp" style="display: none;" role="alert">
+                Edited successfully!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="page-priceprogram--screen1">
+                
+                <div class="dynamic-content">
+                    {{!-- <div class="col-md-6 page-priceprogram--display">
+                      <img src="image/screen-priceprogram-hide.png" class="rounded" alt="...">
+                      <a class="btn btn-success-round btn-block pp-show-hide-screen">Show this screen</a>
+                    </div>  --}}
+                </div>
+                <!-- <div class="col-md-6 page-priceprogram--display">
+                     <img src="image/screen-priceprogram.png" class="rounded" alt="...">
+                    <button class="btn btn-primary-round btn-block pp-show-hide-screen">Hide this screen</button>
+                </div> -->
+               
+                
+                 <table class="table table-bordered table-hover product-rewards" id="retail-table">
+                  <thead>
+                    <tr>
+                      <th colspan="6">RETAIL</th>
+                    </tr>
+
+                    <tr class="trow-header">
+                      <th>#</th>
+                      <th>Percentage Label</th>
+                      <th>Percentage Computation</th>
+                      <th>Labels</th>
+                      <th>Ream Price</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                  <form>
+                    <tr>
+                      <td>1</td>
+                      <td colspan="2"><img class="pp_image" style="width: 40px"></td>
+                      <td class="f1r_label"></td>
+                      <td class="f1r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-1" id="f1r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td class="f2r_percentage_label"></td>
+                      <td class="f2r_percentage_value"></td>
+                      <td class="f2r_label"></td>
+                      <td class="f2r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f2r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td class="f3r_percentage_label"></td>
+                      <td class="f3r_percentage_value"></td>
+                      <td class="f3r_label"></td>
+                      <td class="f3r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f3r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td class="f4r_percentage_label"></td>
+                      <td class="f4r_percentage_value"></td>
+                      <td class="f4r_label"></td>
+                      <td class="f4r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f4r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>5</td>
+                      <td class="f5r_percentage_label"></td>
+                      <td class="f5r_percentage_value"></td>
+                      <td class="f5r_label"></td>
+                      <td class="f5r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f5r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td></td>
+                      <td></td>
+                      <td class="f6r_label"></td>
+                      <td></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-6">Edit</button>
+                      </td>
+                    </tr>
+                  </form>
+                  </tbody>
+              </table>
+
+
+              <table class="table table-bordered table-hover product-rewards" id="wholesale-table">
+                  <thead>
+                    <tr>
+                      <th colspan="6">WHOLESALE</th>
+                    </tr>
+
+                    <tr class="trow-header">
+                      <th>#</th>
+                      <th>Percentage Label</th>
+                      <th>Percentage Computation</th>
+                      <th>Labels</th>
+                      <th>Ream Price</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                  <form>
+                    <tr>
+                      <td>1</td>
+                      <td colspan="2"><img class="pp_image" style="width: 40px"></td>
+                      <td class="f1r_label"></td>
+                      <td class="f1r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-1" id="f1r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      {{!-- <td>2</td>
+                      <td><input type="text" class="form-control form-enable" value="20" required></td>
+                      <td><input type="number" class="form-control form-enable" value="20" min="1" required></td>
+                      <td><input type="text" class="form-control form-enable" value="OUTRIGHT BONUS" required></td>
+                      <td><input type="number" class="form-control form-enable" value="964" min="1" required></td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="button" class="btn btn-success">Save</button>
+                        </div>
+                      </td> --}}
+                      <td>2</td>
+                      <td class="f2r_percentage_label"></td>
+                      <td class="f2r_percentage_value"></td>
+                      <td class="f2r_label"></td>
+                      <td class="f2r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f2r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td class="f3r_percentage_label"></td>
+                      <td class="f3r_percentage_value"></td>
+                      <td class="f3r_label"></td>
+                      <td class="f3r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f3r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td class="f4r_percentage_label"></td>
+                      <td class="f4r_percentage_value"></td>
+                      <td class="f4r_label"></td>
+                      <td class="f4r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f4r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>5</td>
+                      <td class="f5r_percentage_label"></td>
+                      <td class="f5r_percentage_value"></td>
+                      <td class="f5r_label"></td>
+                      <td class="f5r_carton_price"></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-25" id="f5r">Edit</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td></td>
+                      <td></td>
+                      <td class="f6r_label">TOTAL REWARDS</td>
+                      <td></td>
+                      <td>
+                        <button type="button" class="btn btn-secondary-round btn-edit-6">Edit</button>
+                      </td>
+                    </tr>
+                  </form>
+                  </tbody>
+              </table>
+
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+  <!-- MODAL - Update Program -->
+  <div class="modal fade" id="updatepriceprogram" tabindex="-1" role="dialog" aria-labelledby="updatepriceprogram" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <h2>Saving..</h2>
+          <p>Please wait.</p>
+
+        </div>
+      </div>
+    </div>

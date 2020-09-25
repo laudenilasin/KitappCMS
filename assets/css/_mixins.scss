@@ -1,0 +1,46 @@
+@mixin sidebar{
+  padding: 18px;
+  font-weight: 300;
+  font-size: $small;
+  color: $white;
+}
+
+@mixin badge{
+  color: $white;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+@mixin button-round{
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 50px;
+  font-size: $regular;
+  font-weight: 600;
+}
+
+@mixin cursor-disabled() {
+  cursor: not-allowed;
+}
+
+@mixin box-sizing($fmt) {
+  -webkit-box-sizing: $fmt;
+     -moz-box-sizing: $fmt;
+          box-sizing: $fmt;
+}
+
+@mixin box-shadow($fmt) {
+  -webkit-box-shadow: $fmt;
+          box-shadow: $fmt;
+}
+
+@function fade($color, $amnt) {
+  @if $amnt > 1 {
+    $amnt: $amnt / 100; // convert to percentage if int
+  }
+  @return rgba($color, $amnt);
+}

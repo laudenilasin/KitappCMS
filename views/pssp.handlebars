@@ -1,0 +1,131 @@
+    <div class="dashboard-content page-pssp">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Price Program Mechanics</h4>
+              <p>Price Program Mechanics <i class="fas fa-chevron-right"></i> Price Program Mechanics View </p>
+            </div>
+
+            <div class="col-md-12 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" id="success_pssp_edit" style="display: none;" role="alert">
+               Edited successfully!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="page-pssp--screen1">
+                <img src="image/screen-pssp.png" class="rounded" id="screen-pssp-img" alt="...">
+                 <table class="table table-bordered table-hover" id="table_pssp">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Image Upload</th>
+                      <th>Retail</th>
+                      <th>Wholesale</th>
+                      <th>Action</th>
+                    </tr>
+
+                    <tr class="sub-label">
+                      <th colspan="2"></th>
+                      <th>Stick Price</th>
+                      <th>Pack Price</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <form>
+                    <!-- If edit image button is clicked -->
+                    <!-- end -->
+                    <tr>
+                      <td><img src="" id="image_1"></td>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01" disabled>Upload Image</span>
+                          </div>
+
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01" required disabled>
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td id="stick_price_1"></td>
+                      <td id="pack_price_1"></td>
+                      <td><button type="button" class="btn btn-secondary-round editPssp" id="1">Edit</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img src="" id="image_2"></td>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01" disabled>Upload Image</span>
+                          </div>
+
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01" required disabled>
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td id="stick_price_2"></td>
+                      <td id="pack_price_2"></td>
+                      <td><button type="button" class="btn btn-secondary-round editPssp" id="2">Edit</button>
+                      </td>
+
+                      <tr>
+                      <td><img src="" id="image_3"></td>
+                      <td>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01" disabled>Upload Image</span>
+                          </div>
+
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01" required disabled>
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td id="stick_price_3"></td>
+                      <td id="pack_price_3"></td>
+                      <td><button type="button" class="btn btn-secondary-round editPssp" id="3">Edit</button>
+                      </td>
+                    </tr>
+
+                  </form>
+                  </tbody>
+              </table>
+              </div>
+
+             
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+  <!-- MODAL - Update Program -->
+  <div class="modal fade" id="updatepssp" tabindex="-1" role="dialog" aria-labelledby="updatepssp" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <h2>Saving..</h2>
+          <p>Please wait.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>

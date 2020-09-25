@@ -1,0 +1,42 @@
+    <div class="dashboard-content page-content">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Pages</h4>
+              <p>Pages <i class="fas fa-chevron-right"></i> Manage Pages </p>
+            </div>
+
+            <div class="col-md-12 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" id="success_alert_pages" style="display:none;" role="alert">
+                Edited successfully!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <!-- First Row -->
+              <div class="row">
+                <!-- if page on ios app is showed -->
+                {{!-- <div class="col-md-4">
+                  <img src="image/messages-thumbnail.png" class="rounded" alt="...">
+                  <a class="btn btn-cancel-round btn-block"><i class="far fa-eye-slash"></i> Hide</a>
+                </div> --}}
+
+                <!-- if page on ios app is hidden -->
+                <div class="col-md-4">
+                  <img src="image/messages-thumbnail.png" class="rounded" alt="...">
+                  {{#ifCond page.is_shown  '===' 0}}
+                  <a class="btn btn-primary-round btn-block" id="show_hide"><i class="far fa-eye"></i> Show</a>
+                  {{else}}
+                  <a class="btn btn-cancel-round btn-block" id="show_hide"><i class="far fa-eye-slash"></i> Hide</a>
+                  {{/ifCond}}
+                </div>
+              </div>
+              <!-- end of first row-->
+
+            </div>
+          </div>
+      </div>
+    </div>

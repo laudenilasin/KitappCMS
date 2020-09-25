@@ -1,0 +1,128 @@
+    <!-- // Dashboard Content -->
+    <div class="dashboard-content page-users">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Manage Users</h4>
+              <p>Manage Users <i class="fas fa-chevron-right"></i> Users List </p>
+            </div>
+
+            <div class="col-md-12 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" id="success_new_user" role="alert" style="display: none;">
+                <b>[title]</b> message!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <a href="/add-user" class="btn btn-primary-round">Add User</a>
+              <table id="users" class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>Full Name</th>
+                      <th>Email</th>
+                      <th>User Type</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each users}}
+                    <tr id="tr_{{id}}">
+                      <td>{{name}}</td>
+                      <td class="email_address">{{email_address}}</td>
+                      <td>{{type}}</td>
+                      <td>
+                        {{#ifCond is_activated '===' 1}}
+                        <span class="badge badge-success">Active</span>
+                        {{else}}
+                        <span class="badge badge-secondary">Deactivated</span>
+                        {{/ifCond}}
+                      </td>
+                      <td>
+                        {{#ifCond is_activated '===' 1}}
+                        <button type="button" class="btn btn-secondary-round editUser" id="{{id}}">Edit Details</button>
+                        <button type="button" class="btn btn-light-round resetPassword" id="{{id}}&&{{name}}" data-toggle="modal" data-target="#resetpassword">Reset Password</button>
+                        <button type="button" class="btn btn-cancel-round deactivate {{id}}" id="{{id}}&&{{name}}" data-toggle="modal" data-target="#deactivateuser">Deactivate</button>
+                        {{else}}
+                        <button type="button" class="btn btn-secondary-round editUser" id="{{id}}">Edit Details</button>
+                        <button type="button" class="btn btn-light-round resetPassword" id="{{id}}&&{{name}}" data-toggle="modal" data-target="#resetpassword">Reset Password</button>
+                        <button type="button" class="btn btn-success-round activate {{id}}" id="{{id}}&&{{name}}" data-toggle="modal" data-target="#activateuser">Activate</button>
+                        {{/ifCond}}
+                      </td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+              </table>
+
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- MODAL - Reset Password -->
+  <div class="modal fade" id="resetpassword" tabindex="-1" role="dialog" aria-labelledby="resetpassword" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fas fa-exclamation-triangle"></i>
+          <h2>Are you sure?</h2>
+          <p>Are you sure you want to send a <b>reset password</b> to <b id="resetPasswordFullName"><(fullname)></b>?</p>
+
+        </div>
+        <div class="modal-footer">
+             <button type="button" class="btn btn-cancel-round cancelResetPassword">Cancel</button>
+             <button type="button" class="btn btn-primary-round resetPasswordUser">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF MODAL -->
+
+  <!-- MODAL - Deactivate Account -->
+  <div class="modal fade" id="deactivateuser" tabindex="-1" role="dialog" aria-labelledby="deactivateuser" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fas fa-exclamation-triangle"></i>
+          <h2>Are you sure?</h2>
+          <p>Are you sure you want to <b>Deactivate</b> <b id="deactivateUserFullName"><(fullname)></b>?</p>
+
+        </div>
+        <div class="modal-footer">
+             <button type="button" class="btn btn-cancel-round cancelDeactivateUser">Cancel</button>
+             <button type="button" class="btn btn-primary-round deactivateUser">Deactivate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF MODAL -->
+
+  <!-- MODAL - Deactivate Account -->
+  <div class="modal fade" id="activateuser" tabindex="-1" role="dialog" aria-labelledby="activateuser" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <i class="fas fa-exclamation-triangle"></i>
+          <h2>Are you sure?</h2>
+          <p>Are you sure you want to <b>Activate</b> <b id="activateUserFullName"><(fullname)></b>?</p>
+
+        </div>
+        <div class="modal-footer">
+             <button type="button" class="btn btn-cancel-round cancelActivateUser">Cancel</button>
+             <button type="button" class="btn btn-primary-round activateUser">Activate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF MODAL -->

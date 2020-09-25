@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Kitapp | CMS">
+    <meta property="og:description" content="PMFTC Kitapp">
+    <meta property="og:image" content="image/logo-default.jpg">
+    <meta property="og:url" content="https://pfmtc.kitapp.com/">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link href="css/pace.css" rel="stylesheet" />
+    <title>KITAPP CMS</title>
+  </head>
+
+<body class="dashboard">
+  <div class="row">
+
+    <!-- // Sidebar -->
+    <div class="sidebar">
+      <div class="brand">
+        <img src="image/logo-default.png">
+      </div>
+
+      <div class="account">
+          <div class="account-profile">
+            {{#ifCond user_data.image '===' true}}
+                  <img src="{{user_data.image}}" class="rounded-circle">
+            {{else}}
+                  <img src="image/image-profile.jpg" class="rounded-circle">
+            {{/ifCond}}
+          </div>
+
+          <p class="account-name">{{user_data.full_name}}</p>
+          <p class="account-email">{{user_data.email_address}}</p>
+
+          <a class="btn btn-primary-round btn-dark" id="logout_btn">Sign out</a>
+      </div>
+      {{#ifCond user_data.type '===' 'SUPER_ADMIN'}}
+            <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/welcome" id="welcome"> Welcome</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products" id="product"> Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/messages" id="messages"> Messages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pssp" id="pssp"> Price Program Mechanics </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="price-program" id="price-program"> Price Program Rewards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/trade-programs" id="trade-programs"> Trade Programs</a>
+            </li>
+            {{!-- <li class="nav-item">
+              <a class="nav-link" href="power-of-brand" id="power-of-brand"> Power of Brands </a>
+             </li> --}}
+             <li class="nav-item">
+              <a class="nav-link" href="/cbf-videos" id="cbf-videos"> Video</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/manage-users" id="manage-users"> Manage Users</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/change-password" id="change-password"> Change Password</a>
+            </li>
+      </ul>   
+      {{else}}
+            <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/welcome" id="welcome"> Welcome</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/trade-programs" id="trade-programs"> Trade Programs</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/change-password" id="change-password"> Change Password</a>
+            </li>
+      </ul>   
+      {{/ifCond}}    
+    </div>
+    {{{body}}}
+    </body>
+ <script>
+   window.paceOptions = {
+    ajax: false,
+    restartOnRequestAfter: false,
+};</script>
+ <script type="text/javascript" src="js/js-util/jquery.min.js"></script>
+ <script type="text/javascript" src="js/js-util/bootstrap.bundle.min.js"></script> 
+ <script type="text/javascript" src="js/js-util/moment.min.js"></script>
+ <script type="text/javascript" src="js/js-util/bootstrap-select.min.js"></script>
+ <script type="text/javascript" src="js/js-util/datatables.min.js"></script>
+ <script type="text/javascript" src="js/js-util/daTatables.buttons.min.js"></script>
+ <script type="text/javascript" src="js/js-util/custom.js"></script> 
+ <script type="text/javascript" src="js/js-util/pace.js"></script> 
+ <script type="text/javascript" src="js/app.js"></script>
+ <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>

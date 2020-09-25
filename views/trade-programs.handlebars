@@ -1,0 +1,191 @@
+    <div class="dashboard-content page-programs">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Trade Programs</h4>
+              <p>Trade Programs <i class="fas fa-chevron-right"></i> Image view </p>
+            </div>
+
+            <div class="col-md-12 page-content">
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success" id="success_tp_edit" style="display: none;" role="alert">
+                Edited successfully!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              {{#ifCond user_data.type '===' 'SUPER_ADMIN'}}
+              <div class="page-programs--screen1">
+                <img src="image/messages-screen-5.png" class="rounded" alt="...">
+                 <table class="table table-bordered table-hover" id="table_first5">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th style="width: auto;">Image Title</th>
+                      <th style="width: auto;">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <form>
+                    <tr>
+                      <td><img id="image_1"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_1" data-id="1" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="1">Edit Image</button></td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_2"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_2" data-id="2"  value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="2">Edit Image</button></td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_3"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_3" data-id="3" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="3">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_4"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_4" data-id="4" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="4">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_5"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_5" data-id="5" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="5">Edit Image</button>
+                      </td>
+                    </tr>
+                      <tr>
+                      <td><img  id="image_6"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_6" data-id="6" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="6">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_7"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_7" data-id="7" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="7">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_8"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_8" data-id="8" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="8">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_9"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_9" data-id="9" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="9">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_10"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_10" data-id="10" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="10">Edit Image</button>
+                      </td>
+                    </tr>
+                  </form>
+                  </tbody>
+              </table>
+              </div>
+              {{else}}
+                            <div class="page-programs--screen1">
+                <img src="image/messages-screen-5.png" class="rounded" alt="...">
+                 <table class="table table-bordered table-hover" id="table_first5">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th style="width: auto;">Image Title</th>
+                      <th style="width: auto;">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <form>
+                    <tr aria-disabled="true">
+                      <td><img  id="image_1"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_1" data-id="1" value="image title"></td>
+                      <td><a class="btn btn-secondary-round btn-edit disabled" data-id="1">Edit Image</a></td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_2"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_2" data-id="2"  value="image title"></td>
+                      <td><a class="btn btn-secondary-round btn-edit disabled" data-id="2">Edit Image</a></td>
+                    </tr>
+                    <tr>
+                      <td><img  id="image_3"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_3" data-id="3" value="image title"></td>
+                      <td><a class="btn btn-secondary-round btn-edit disabled" data-id="3">Edit Image</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img id="image_4"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_4" data-id="4" value="image title"></td>
+                      <td><a class="btn btn-secondary-round btn-edit disabled" data-id="4">Edit Image</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img id="image_5"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_5" data-id="5" value="image title"></td>
+                      <td><a class="btn btn-secondary-round btn-edit disabled" data-id="5">Edit Image</a>
+                      </td>
+                    </tr>
+                      <tr>
+                      <td><img id="image_6"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_6" data-id="6" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="6">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img id="image_7"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_7" data-id="7" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="7">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img id="image_8"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_8" data-id="8" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="8">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img id="image_9"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_9" data-id="9" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="9">Edit Image</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><img id="image_10"></td>
+                      <td><input type="text" class="form-control" disabled id="caption_10" data-id="10" value="image title"></td>
+                      <td><button type="button" class="btn btn-secondary-round btn-edit" data-id="10">Edit Image</button>
+                      </td>
+                    </tr>
+                  </form>
+                  </tbody>
+              </table>
+              </div>
+              {{/ifCond}}
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <div class="modal fade updateprogram" id="" tabindex="-1" role="dialog" aria-labelledby="updateprogram" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <h2>Saving..</h2>
+          <p>Please wait.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>

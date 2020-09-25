@@ -1,0 +1,64 @@
+    <!-- // Dashboard Content -->
+    <div class="dashboard-content page-users">
+      <div class="container">
+          <div class="row-fluid">
+            <div class="col-md-12 page-title">
+              <h4>Manage Users</h4>
+              <p>Manage Users <i class="fas fa-chevron-right"></i> Users List </p>
+            </div>
+
+           <div class="col-md-7 page-content page-users--add">
+                
+              <form>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Full Name</label>
+                  <div class="col-sm-9"><input type="text" class="form-control user-completion" id="user_full_name" maxlength="25" required>
+                  <div class="feedback" id="if_full_name">This is a required field</div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Email Address</label>
+                  <div class="col-sm-9"><input type="email" class="form-control user-completion" id="user_email_address" required>
+                  <div class="feedback" id="if_user_email_address">This is a required field</div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">User Type</label>
+                  <div class="col-sm-9">
+                      <select class="form-control user-completion" id="user_type" required>
+                        <option> </option>
+                        <option value="SUPER_ADMIN">Super Admin</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                    <div class="feedback">This is a required field</div>
+                  </div>
+                </div>
+
+                <div class="form-group footer-buttons">
+                  <a href="/manage-users" class="btn btn-cancel-round" id="cancel_user_btn">Cancel</a>
+                  <a class="btn btn-primary-round disabled" id="add_user_btn">{{label_btn}} <span class="spinner-border spinner-border-sm" id="user-btn-loader" style="display:none;" role="status" aria-hidden="true"></span></a>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="adduser" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <h2>Saving..</h2>
+          <p>Please wait.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
