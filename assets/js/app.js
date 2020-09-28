@@ -1,8 +1,8 @@
 $( document ).ready(async function() {
     console.log('READY'); 
     AWS.config.update({
-        accessKeyId: "AKIA2OEREH6VJIC6FJXA",
-        secretAccessKey: "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",
+        accessKeyId: "",
+        secretAccessKey: "",
         region: "ap-southeast-1"
     })
     const bucketName = 'kitapp'; // Enter your bucket name
